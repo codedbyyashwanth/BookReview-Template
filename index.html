@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bookie - The Best Review Site</title>
+
+        <!-- CSS Style -->
+        <link rel="stylesheet" href="./resources/styles/style.css">
+
+        <!-- ion-icon  -->
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Rubik:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+        <header>
+                <nav class="containers">
+                        <div class="logo-container">
+                                <div class="img-container">
+                                        <img src="./resources/img/logo.png" alt="">
+                                </div>
+                        </div>
+                        <div class="nav-container">
+                                <!-- Navigation Menu for Large Screens like desktop or PC -->
+                                <ul class="desktop-nav">
+                                        <li><a href="#">Home</a></li>
+                                        <li><a href="#">Books</a></li>
+                                        <li><a href="#">Favourites</a></li>
+                                        <li><a href="#">Log  In / Sign Up</a></li>
+                                </ul>
+                                <!-- Navigation Menu for Small Screens like mobile phones -->
+                                <ul class="mobile-nav">
+                                        <li><a href="#">Home</a></li>
+                                        <li><a href="#">Books</a></li>
+                                        <li><a href="#">Favourites</a></li>
+                                        <li><a href="#">Log  In / Sign Up</a></li>
+                                </ul>
+                                <!-- Menu bar -->
+                                <div class="menu-container">
+                                        <ion-icon id="menu" name="menu-sharp"></ion-icon>
+                                </div>
+                        </div>
+                </nav>
+                <div class="header-text-container containers">
+                        <div>
+                                <h1>Find Out Best Reviewed Books for Reading</h1>
+                                <p>
+                                        Bookie is a review website which gives you the idea about best books available for you to decide which one is best for you
+                                </p>
+                                <a href="#">Review Books</a>
+                        </div>
+                </div>
+        </header>
+
+        <main>
+                <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit distinctio ullam in explicabo quos consectetur nulla adipisci perspiciatis quas autem dicta voluptas, veniam exercitationem ipsa esse, accusamus eius? Sapiente, corrupti.
+                </p>
+        </main>
+
+        <footer></footer>
+
+        <script>
+                const menu = document.getElementById("menu");
+                const desktop_navbar = document.getElementsByClassName("mobile-nav")[0];
+                const menu_bar = document.getElementsByClassName("menu-container")[0];
+                var clicked = false;
+
+                menu.addEventListener('click', () => {
+                        if (clicked) {
+                                menu.setAttribute("name", "menu-sharp");
+                                clicked = false;
+                                desktop_navbar.style.display = "none";
+                        } else {
+                                menu.setAttribute("name", "close-sharp");
+                                clicked = true;
+                                desktop_navbar.style.display = "block";
+                        }
+                });
+        </script>
+</body>
+</html>
